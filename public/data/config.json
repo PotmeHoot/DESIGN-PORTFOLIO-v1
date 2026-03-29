@@ -1,0 +1,247 @@
+{
+  "settings": {
+    "title": "Juraj Žáček | Senior Graphic Designer & Content Specialist",
+    "ownerName": "Juraj Žáček",
+    "email": "jurajzacek13@gmail.com",
+    "location": "Bratislava, Slovakia",
+    "inquireLabel": "Inquire",
+    "seo": {
+      "description": "Portfolio of Juraj Žáček, a senior graphic designer specializing in high-performance social media content, motion graphics, and AI-driven visuals for global brands.",
+      "keywords": [
+        "Graphic Design",
+        "Motion Graphics",
+        "AI Visuals",
+        "Social Media Content",
+        "Bratislava",
+        "Slovakia"
+      ],
+      "ogImage": "/assets/og-image.jpg"
+    }
+  },
+  "footer": {
+    "privacyLabel": "Privacy",
+    "termsLabel": "Terms",
+    "cookiePolicyLabel": "Cookies",
+    "rightsReservedLabel": "ALL RIGHTS RESERVED."
+  },
+  "error": {
+    "title": "Failed to load content",
+    "description": "Please try refreshing the page.",
+    "retryLabel": "Try Again",
+    "invalidFormatLabel": "Invalid format",
+    "missingAssetLabel": "Missing asset"
+  },
+  "navigation": [
+    { "id": "work", "label": "Selected Work", "visible": true, "order": 1 },
+    { "id": "about", "label": "About", "visible": true, "order": 2 },
+    { "id": "services", "label": "Expertise", "visible": true, "order": 3 },
+    { "id": "ar", "label": "AR Filters", "visible": true, "order": 4 },
+    { "id": "contact", "label": "Contact", "visible": true, "order": 5 }
+  ],
+  "hero": {
+    "backgroundImage": "/assets/hero/main.jpg",
+    "eyebrow": "Motion + AI + AR Specialist",
+    "title": "Motion + AI + AR Specialist for Agencies.",
+    "description": "Crafting high-performance visuals and interactive experiences that scale modern brands through motion design, AI-driven production, and AR technology.",
+    "ctaPrimary": { "label": "View Work", "href": "#work" },
+    "ctaSecondary": { "label": "Contact Me", "href": "mailto:jurajzacek13@gmail.com" },
+    "stats": [
+      { "label": "Years Experience", "value": "8+" },
+      { "label": "Projects Delivered", "value": "200+" },
+      { "label": "Global Brands", "value": "15+" }
+    ],
+    "availabilityLabel": "Available for new projects",
+    "scrollLabel": "Scroll to explore"
+  },
+  "showreel": {
+    "eyebrow": "Motion & Events Showreel",
+    "title": "Large-scale motion design for global events.",
+    "description": "Specializing in high-impact visual content for major conferences, stage screens, and immersive event environments. My expertise includes on-site visual adaptation and design for complex screen layouts.",
+    "highlights": [
+      "Conference Visuals",
+      "Stage Screens",
+      "Event Motion Design",
+      "Large Format Content",
+      "On-site Adaptation"
+    ],
+    "poster": "/assets/showreel/poster.jpg",
+    "videoUrl": "/assets/showreel/reel.mp4",
+    "videoLabel": "Motion Portfolio",
+    "highlightsLabel": "Key Areas",
+    "cta": { "label": "Watch Showreel", "href": "#showreel" },
+    "featured": true
+  },
+  "portfolio": {
+    "eyebrow": "Portfolio",
+    "description": "A selection of high-performance content designed to scale modern brands and deliver real impact.",
+    "trustedByLabel": "Trusted by",
+    "graphicWorkLabel": "Graphic Design",
+    "motionWorkLabel": "Motion Design",
+    "videoIndicatorLabel": "Video",
+    "comingSoonLabel": "Coming Soon",
+    "clientLabel": "Client",
+    "agencyLabel": "Agency",
+    "yearLabel": "Year",
+    "viewProjectLabel": "View Project",
+    "backToProjectsLabel": "Back to Projects",
+    "projectDetailsLabel": "Project Details",
+    "descriptionLabel": "Description",
+    "galleryLabel": "Project Gallery"
+  },
+  "arShowcase": {
+    "eyebrow": "Interactive Tech",
+    "title": "AR Filters.",
+    "description": "Interactive AR filters for TikTok. Merging graphic design with interactive technology to create scroll-stopping experiences.",
+    "platformLabel": "TikTok Effect House",
+    "comingSoonLabel": "Coming Soon",
+    "features": [
+      { "title": "Effect House", "desc": "Advanced TikTok filter creation with high viral potential." },
+      { "title": "3D Integration", "desc": "Seamlessly embedding 3D objects into real-world environments." },
+      { "title": "Motion Tracking", "desc": "High-precision face and body tracking for immersive effects." }
+    ]
+  },
+  "services": {
+    "eyebrow": "Expertise",
+    "title": "Services & Expertise",
+    "description": "Specialized visual solutions for modern digital platforms.",
+    "items": [
+      {
+        "id": "social",
+        "title": "Social Media Design",
+        "description": "Static and carousel content optimized for high reach and brand consistency across all platforms.",
+        "icon": "Layout",
+        "order": 1
+      },
+      {
+        "id": "motion",
+        "title": "Reels & Motion Content",
+        "description": "Dynamic video content and motion graphics designed to capture attention in the first seconds.",
+        "icon": "Play",
+        "order": 2
+      },
+      {
+        "id": "ai",
+        "title": "AI-Powered Production",
+        "description": "Leveraging cutting-edge AI tools to accelerate visual production and create unique visuals.",
+        "icon": "Cpu",
+        "order": 3
+      },
+      {
+        "id": "ar",
+        "title": "AR Filters",
+        "description": "Interactive augmented reality experiences for TikTok that drive brand engagement.",
+        "icon": "Sparkles",
+        "order": 4
+      }
+    ]
+  },
+  "collaboration": {
+    "eyebrow": "Collaboration",
+    "title": "How I Work",
+    "description": "A structured approach to delivering high-quality visual content.",
+    "stepLabel": "Step",
+    "steps": [
+      {
+        "id": "brief",
+        "title": "Briefing & Strategy",
+        "description": "Understanding your goals, target audience, and platform requirements.",
+        "icon": "MessageSquare",
+        "order": 1
+      },
+      {
+        "id": "concept",
+        "title": "Concept & Moodboard",
+        "description": "Developing visual direction and creative concepts for approval.",
+        "icon": "Palette",
+        "order": 2
+      },
+      {
+        "id": "production",
+        "title": "Production & Motion",
+        "description": "Executing designs, motion graphics, or AI-supported visuals.",
+        "icon": "Zap",
+        "order": 3
+      },
+      {
+        "id": "delivery",
+        "title": "Review & Delivery",
+        "description": "Refining outputs based on feedback and delivering final production-ready files.",
+        "icon": "CheckCircle",
+        "order": 4
+      }
+    ]
+  },
+  "contact": {
+    "title": "Let's create something",
+    "subtitle": "something",
+    "highlight": "iconic.",
+    "description": "Whether you are an agency looking for a reliable partner or a brand in need of top-tier content, I am here to help.",
+    "cta": "Start a Project",
+    "status": "Available for new projects",
+    "email": "jurajzacek13@gmail.com",
+    "directLabel": "Direct Contact",
+    "socialLabel": "Social Media",
+    "socials": [
+      { "name": "LinkedIn", "url": "https://www.linkedin.com/in/jrjzck/", "icon": "Linkedin" },
+      { "name": "TikTok", "url": "https://www.tiktok.com/@p0tm3_h00t", "icon": "Video" },
+      { "name": "Behance", "url": "#", "icon": "ExternalLink" }
+    ]
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "Bridging design, motion, and technology.",
+    "description": "Based in Bratislava, I collaborate with leading agencies and brands to deliver high-quality visual content. My approach combines traditional graphic design principles with modern AI tools and motion graphics to create content that stands out in today's fast-paced digital world.",
+    "brandsLabel": "Selected Brands",
+    "expertiseLabel": "Expertise",
+    "experienceEyebrow": "Experience",
+    "experienceTitle": "Career",
+    "toolsEyebrow": "Tools & AI",
+    "toolsTitle": "Stack",
+    "expertise": [
+      "Social Media Strategy & Design",
+      "Motion Graphics & Reels Production",
+      "AI-Supported Visual Creation",
+      "TikTok AR Filters (Effect House)",
+      "Campaign Visuals & Key Visuals"
+    ],
+    "experience": [
+      {
+        "icon": "Briefcase",
+        "title": "Senior Graphic Designer",
+        "desc": "Specializing in high-performance social media content and motion graphics for global brands."
+      },
+      {
+        "icon": "Zap",
+        "title": "AI Visual Specialist",
+        "desc": "Integrating cutting-edge AI tools into creative workflows to accelerate production and enhance quality."
+      },
+      {
+        "icon": "Sparkles",
+        "title": "TikTok AR Specialist",
+        "desc": "Creating interactive augmented reality experiences exclusively for TikTok (Effect House)."
+      }
+    ],
+    "tools": [
+      {
+        "name": "Adobe Creative Cloud",
+        "level": "Expert",
+        "desc": "Photoshop, Illustrator, After Effects, Premiere Pro."
+      },
+      {
+        "name": "AI Production Stack",
+        "level": "Advanced",
+        "desc": "Midjourney, Stable Diffusion, Runway Gen-2, Magnific AI."
+      },
+      {
+        "name": "AR Development",
+        "level": "Expert",
+        "desc": "Effect House Specialist (TikTok)."
+      },
+      {
+        "name": "Motion Design",
+        "level": "Expert",
+        "desc": "High-end Reels, kinetic typography, and brand animations."
+      }
+    ]
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "projects": [
+    {
+      "id": "biedronka",
+      "title": "Biedronka",
+      "category": "Retail / Social",
+      "folder": "biedronka",
+      "poster": "poster.jpg",
+      "client": "Biedronka",
+      "agency": "MAYER/McCANN",
+      "year": "2024-2025",
+      "shortDescription": "High-performance social media graphics and carousel posts for Poland's largest supermarket chain.",
+      "status": "ready",
+      "featured": true,
+      "order": 1,
+      "assets": [
+        { "type": "image", "file": "preview-01.jpg" },
+        { "type": "image", "file": "preview-02.jpg" },
+        { "type": "image", "file": "preview-03.jpg" }
+      ]
+    },
+    {
+      "id": "raiffeisen",
+      "title": "Raiffeisen Bank",
+      "category": "Banking / Digital",
+      "folder": "raiffeisen",
+      "poster": "poster.jpg",
+      "client": "Raiffeisen Bank",
+      "year": "2024",
+      "shortDescription": "Digital assets and campaign graphics for banking products and services.",
+      "status": "ready",
+      "featured": true,
+      "order": 2,
+      "assets": [
+        { "type": "image", "file": "preview-01.jpg" },
+        { "type": "image", "file": "preview-02.jpg" }
+      ]
+    },
+    {
+      "id": "molicare",
+      "title": "Hartmann / MoliCare",
+      "category": "Healthcare / Social",
+      "folder": "molicare",
+      "poster": "poster.jpg",
+      "client": "Hartmann / MoliCare",
+      "year": "2024",
+      "shortDescription": "Comprehensive social media campaign visuals for healthcare and hygiene products.",
+      "status": "ready",
+      "featured": true,
+      "order": 3,
+      "assets": [
+        { "type": "image", "file": "preview-01.jpg" },
+        { "type": "image", "file": "preview-02.jpg" },
+        { "type": "image", "file": "preview-03.jpg" }
+      ]
+    },
+    {
+      "id": "brokeria",
+      "title": "Brokeria",
+      "category": "Finance / Identity",
+      "folder": "brokeria",
+      "poster": "poster.jpg",
+      "client": "Brokeria",
+      "year": "2023",
+      "shortDescription": "Modernizing visual identity and creating digital communication channels.",
+      "status": "ready",
+      "featured": true,
+      "order": 4,
+      "assets": [
+        { "type": "image", "file": "preview-01.jpg" },
+        { "type": "image", "file": "preview-02.jpg" }
+      ]
+    },
+    {
+      "id": "motion",
+      "title": "AI Visual Production",
+      "category": "AI / Motion",
+      "folder": "motion",
+      "poster": "poster.jpg",
+      "client": "Personal / R&D",
+      "year": "2025",
+      "shortDescription": "Exploring the intersection of AI-generated imagery and commercial motion design.",
+      "status": "ready",
+      "featured": true,
+      "order": 5,
+      "assets": [
+        { "type": "video", "file": "preview.mp4" }
+      ]
+    }
+  ],
+  "arItems": [
+    {
+      "id": "tiktok-filter-1",
+      "title": "TikTok Interactive Effect",
+      "platform": "TikTok",
+      "status": "ready",
+      "link": "https://www.tiktok.com/...",
+      "featured": true,
+      "order": 1
+    },
+    {
+      "id": "tiktok-filter-2",
+      "title": "TikTok Brand Experience",
+      "platform": "TikTok",
+      "status": "coming_soon",
+      "link": "#",
+      "featured": true,
+      "order": 2
+    }
+  ]
+}
