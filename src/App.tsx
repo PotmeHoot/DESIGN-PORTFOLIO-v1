@@ -11,6 +11,7 @@ import { Showreel } from "./components/Showreel";
 import { Portfolio } from "./components/Portfolio";
 // Lazy load non-critical sections that are further down the page
 const About = lazy(() => import("./components/About").then(m => ({ default: m.About })));
+const Pricing = lazy(() => import("./components/Pricing").then(m => ({ default: m.Pricing })));
 const Services = lazy(() => import("./components/Services").then(m => ({ default: m.Services })));
 const ARShowcase = lazy(() => import("./components/ARShowcase").then(m => ({ default: m.ARShowcase })));
 const Expertise = lazy(() => import("./components/Expertise").then(m => ({ default: m.Expertise })));
@@ -90,6 +91,11 @@ function AppContent() {
         <LazySection id="about">
           <Suspense fallback={<SectionLoader />}>
             <About />
+          </Suspense>
+        </LazySection>
+        <LazySection id="pricing">
+          <Suspense fallback={<SectionLoader />}>
+            <Pricing />
           </Suspense>
         </LazySection>
         <LazySection id="services">

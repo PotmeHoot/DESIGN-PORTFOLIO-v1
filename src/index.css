@@ -18,6 +18,11 @@
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Space Grotesk", sans-serif;
 
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-base: 250ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 400ms cubic-bezier(0.16, 1, 0.3, 1);
+
   /* Animations */
   --animate-shimmer: shimmer 2s infinite linear;
 
@@ -30,11 +35,13 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
   }
 
   body {
     @apply bg-bg-primary text-text-primary antialiased selection:bg-accent selection:text-white relative;
     font-family: var(--font-sans);
+    text-rendering: optimizeLegibility;
   }
 
   h1, h2, h3, h4 {
@@ -52,19 +59,24 @@
 }
 
 @utility glass-hover {
-  @apply hover:bg-white/90 hover:border-accent/20 transition-all duration-300;
+  @apply transition-all duration-200;
+  @media (hover: hover) {
+    @apply hover:bg-white/90 hover:border-accent/20 hover:-translate-y-0.5;
+  }
 }
 
 @utility text-gradient {
-  @apply bg-clip-text text-transparent bg-gradient-to-b from-text-primary to-text-secondary;
+  @apply bg-clip-text text-transparent bg-gradient-to-b from-text-primary to-text-secondary/90;
 }
 
 @utility card-base {
-  @apply bg-bg-secondary border border-border rounded-xl transition-all duration-300 overflow-hidden;
+  @apply bg-bg-secondary border border-border rounded-xl transition-all duration-250 overflow-hidden;
 }
 
 @utility card-hover {
-  @apply hover:border-accent/30 hover:shadow-sm;
+  @media (hover: hover) {
+    @apply hover:border-accent/30 hover:shadow-sm hover:-translate-y-1;
+  }
 }
 
 @utility card-padding {
@@ -96,13 +108,22 @@
 }
 
 @utility btn-primary {
-  @apply w-full sm:w-auto px-6 py-3 md:px-8 md:py-4 bg-accent text-white rounded-lg font-semibold text-base flex items-center justify-center gap-2 hover:bg-accent-hover active:scale-[0.98] transition-all;
+  @apply w-full sm:w-auto px-6 py-3 md:px-8 md:py-4 bg-accent text-white rounded-lg font-semibold text-base flex items-center justify-center gap-2 active:scale-[0.98] transition-all duration-200;
+  @media (hover: hover) {
+    @apply hover:bg-accent-hover hover:-translate-y-0.5 hover:shadow-lg hover:shadow-accent/10;
+  }
 }
 
 @utility btn-secondary {
-  @apply w-full sm:w-auto px-6 py-3 md:px-8 md:py-4 bg-white text-text-primary border border-border rounded-lg font-semibold text-base hover:bg-bg-primary transition-all flex items-center justify-center gap-2;
+  @apply w-full sm:w-auto px-6 py-3 md:px-8 md:py-4 bg-white text-text-primary border border-border rounded-lg font-semibold text-base active:scale-[0.98] transition-all duration-200 flex items-center justify-center gap-2;
+  @media (hover: hover) {
+    @apply hover:bg-bg-primary hover:border-text-muted/30 hover:-translate-y-0.5;
+  }
 }
 
 @utility btn-light {
-  @apply w-full sm:w-auto px-6 py-3 md:px-8 md:py-4 bg-text-primary text-white rounded-lg font-semibold text-base flex items-center justify-center gap-2 hover:opacity-90 active:scale-[0.98] transition-all;
+  @apply w-full sm:w-auto px-6 py-3 md:px-8 md:py-4 bg-text-primary text-white rounded-lg font-semibold text-base flex items-center justify-center gap-2 active:scale-[0.98] transition-all duration-200;
+  @media (hover: hover) {
+    @apply hover:opacity-90 hover:-translate-y-0.5;
+  }
 }

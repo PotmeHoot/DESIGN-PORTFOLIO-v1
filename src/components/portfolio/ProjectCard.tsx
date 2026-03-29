@@ -72,8 +72,8 @@ export const ProjectCard = memo(({ item, index, onSelect }: ProjectCardProps) =>
     >
       <motion.div 
         className="relative aspect-[4/5] md:aspect-[3/4] overflow-hidden rounded-xl bg-bg-secondary border border-border shadow-sm"
-        whileHover={shouldReduceMotion ? {} : { scale: 1.03 }}
-        transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+        whileHover={shouldReduceMotion || !isHoverSupported ? {} : { scale: 1.03, y: -4 }}
+        transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
       >
         {/* Poster Image */}
         <motion.img

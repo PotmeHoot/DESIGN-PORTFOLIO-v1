@@ -34,9 +34,10 @@
   "navigation": [
     { "id": "work", "label": "Selected Work", "visible": true, "order": 1 },
     { "id": "about", "label": "About", "visible": true, "order": 2 },
-    { "id": "services", "label": "Expertise", "visible": true, "order": 3 },
-    { "id": "ar", "label": "AR Filters", "visible": true, "order": 4 },
-    { "id": "contact", "label": "Contact", "visible": true, "order": 5 }
+    { "id": "pricing", "label": "Pricing", "visible": true, "order": 3 },
+    { "id": "services", "label": "Expertise", "visible": true, "order": 4 },
+    { "id": "ar", "label": "AR Filters", "visible": true, "order": 5 },
+    { "id": "contact", "label": "Contact", "visible": true, "order": 6 }
   ],
   "hero": {
     "backgroundImage": "/assets/hero/main.jpg",
@@ -181,6 +182,16 @@
     "email": "jurajzacek13@gmail.com",
     "directLabel": "Direct Contact",
     "socialLabel": "Social Media",
+    "form": {
+      "nameLabel": "Name",
+      "namePlaceholder": "Your name",
+      "emailLabel": "Email",
+      "emailPlaceholder": "your@email.com",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Tell me about your project...",
+      "submitLabel": "Send Message",
+      "successMessage": "Message sent! I'll get back to you soon."
+    },
     "socials": [
       { "name": "LinkedIn", "url": "https://www.linkedin.com/in/jrjzck/", "icon": "Linkedin" },
       { "name": "TikTok", "url": "https://www.tiktok.com/@p0tm3_h00t", "icon": "Video" },
@@ -241,6 +252,35 @@
         "name": "Motion Design",
         "level": "Expert",
         "desc": "High-end Reels, kinetic typography, and brand animations."
+      }
+    ]
+  },
+  "pricing": {
+    "eyebrow": "Pricing",
+    "title": "Transparent Packages",
+    "description": "Simple pricing for high-end creative services. Choose the plan that fits your needs.",
+    "plans": [
+      {
+        "id": "motion-lite",
+        "title": "Motion Lite",
+        "price": "€1,200",
+        "description": "Perfect for small social media campaigns. Includes 3 high-end reels and basic motion graphics.",
+        "cta": "Start with Lite"
+      },
+      {
+        "id": "studio-standard",
+        "title": "Studio Standard",
+        "price": "€2,500",
+        "description": "Our most popular plan. Includes 7 reels, AI-enhanced visuals, and a custom AR filter for TikTok.",
+        "cta": "Go Standard",
+        "featured": true
+      },
+      {
+        "id": "agency-pro",
+        "title": "Agency Pro",
+        "price": "€4,800",
+        "description": "Full-scale production for agencies. Unlimited motion assets, advanced AR, and dedicated AI R&D.",
+        "cta": "Get Pro"
       }
     ]
   }

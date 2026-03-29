@@ -24,7 +24,7 @@ export const Navbar = () => {
               key={link.id}
               href={`#${link.id}`} 
               onClick={(e) => handleLinkClick(e, link.id)}
-              className={`transition-colors ${activeSection === link.id ? "text-accent" : "hover:text-accent"}`}
+              className={`transition-colors duration-200 ${activeSection === link.id ? "text-accent" : "text-text-secondary hover:text-accent"}`}
               aria-current={activeSection === link.id ? "page" : undefined}
             >
               {link.label}

@@ -47,19 +47,15 @@ export const Hero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row items-center gap-4 md:gap-6 w-full sm:w-auto">
-              <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="w-full sm:w-auto">
-                <Button href={hero.ctaPrimary.href} variant="primary" className="w-full sm:w-auto group">
-                  {hero.ctaPrimary.label} 
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Button>
-              </motion.div>
+              <Button href={hero.ctaPrimary.href} variant="primary" className="w-full sm:w-auto group">
+                {hero.ctaPrimary.label} 
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
+              </Button>
               
-              <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="w-full sm:w-auto">
-                <Button href={hero.ctaSecondary.href} variant="secondary" className="w-full sm:w-auto group border-border hover:border-accent/30">
-                  <Mail className="w-4 h-4 text-text-muted group-hover:text-accent transition-colors" />
-                  {hero.ctaSecondary.label}
-                </Button>
-              </motion.div>
+              <Button href={hero.ctaSecondary.href} variant="secondary" className="w-full sm:w-auto group border-border">
+                <Mail className="w-4 h-4 text-text-muted group-hover:text-accent transition-colors duration-200" />
+                {hero.ctaSecondary.label}
+              </Button>
             </div>
 
             <div className="mt-16 grid grid-cols-3 gap-8 border-t border-border pt-8 w-full max-w-md">

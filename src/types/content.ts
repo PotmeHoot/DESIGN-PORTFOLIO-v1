@@ -147,6 +147,16 @@ export interface ContactContent {
   email: string;
   directLabel: string;
   socialLabel: string;
+  form: {
+    nameLabel: string;
+    namePlaceholder: string;
+    emailLabel: string;
+    emailPlaceholder: string;
+    messageLabel: string;
+    messagePlaceholder: string;
+    submitLabel: string;
+    successMessage: string;
+  };
   socials: {
     name: string;
     url: string;
@@ -175,6 +185,22 @@ export interface AboutContent {
     level: string;
     desc: string;
   }[];
+}
+
+export interface PricingPlan {
+  id: string;
+  title: string;
+  price: string;
+  description: string;
+  cta: string;
+  featured?: boolean;
+}
+
+export interface PricingContent {
+  eyebrow: string;
+  title: string;
+  description: string;
+  plans: PricingPlan[];
 }
 
 export interface SiteContent {
@@ -237,4 +263,5 @@ export interface SiteContent {
   };
   contact: ContactContent;
   about: AboutContent;
+  pricing?: PricingContent;
 }
