@@ -5,6 +5,7 @@ import { Asset } from "../ui/Asset";
 import { PillLabel } from "../ui/PillLabel";
 import { useSiteContent } from "../../hooks/useSiteContent";
 import { useEffect } from "react";
+import { cn } from "../../lib/utils";
 
 interface ProjectDetailProps {
   project: Project | null;
@@ -29,9 +30,12 @@ export const ProjectDetail = ({ project, onClose }: ProjectDetailProps) => {
 
   if (!project) return null;
 
+  const isMotionOrAR = project.category.toLowerCase().includes('motion') || 
+                       project.category.toLowerCase().includes('ar') || 
+                       project.category.toLowerCase().includes('ai');
+
   const heroAsset = project.assets.find(a => a.type === 'video') || project.assets[0];
   const heroUrl = heroAsset ? `/assets/work/${project.folder}/${heroAsset.file}` : `/assets/work/${project.folder}/${project.poster}`;
-  const heroWebpUrl = heroAsset?.webpFile ? `/assets/work/${project.folder}/${heroAsset.webpFile}` : (project.webpPoster ? `/assets/work/${project.folder}/${project.webpPoster}` : undefined);
   const isHeroVideo = heroAsset?.type === 'video';
 
   return (
@@ -50,7 +54,7 @@ export const ProjectDetail = ({ project, onClose }: ProjectDetailProps) => {
               className="flex items-center gap-2 text-text-secondary hover:text-accent transition-colors group"
             >
               <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-              <span className="text-xs font-bold uppercase tracking-widest">{portfolio.backToProjectsLabel}</span>
+              <span className="text-[10px] font-bold uppercase tracking-[0.2em]">{portfolio.backToProjectsLabel}</span>
             </button>
             
             <button
@@ -84,7 +88,7 @@ export const ProjectDetail = ({ project, onClose }: ProjectDetailProps) => {
                 className="w-full h-full object-cover"
               />
             )}
-            <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-bg-primary via-transparent to-transparent" />
             
             <div className="absolute bottom-0 left-0 w-full p-8 md:p-16">
               <div className="max-w-7xl mx-auto">
@@ -93,10 +97,10 @@ export const ProjectDetail = ({ project, onClose }: ProjectDetailProps) => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2 }}
                 >
-                  <PillLabel className="bg-bg-primary border-border mb-4">
+                  <PillLabel className="bg-white border-border mb-4">
                     {project.category}
                   </PillLabel>
-                  <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-text-primary mb-6 tracking-tight">
+                  <h1 className="text-4xl md:text-7xl lg:text-8xl font-bold text-text-primary mb-6 tracking-tight">
                     {project.title}
                   </h1>
                 </motion.div>
@@ -105,12 +109,16 @@ export const ProjectDetail = ({ project, onClose }: ProjectDetailProps) => {
           </section>
  
           {/* Content Section */}
-          <section className="max-w-7xl mx-auto px-6 py-16 md:py-24">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
+          <section className="max-w-7xl mx-auto px-6 py-16 md:py-32">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 md:gap-24">
               {/* Info Column */}
-              <div className="lg:col-span-1 space-y-12">
-                <div>
-                  <h2 className="text-[10px] uppercase tracking-[0.3em] font-bold text-text-muted mb-6">{portfolio.projectDetailsLabel}</h2>
+              <div className="lg:col-span-4 space-y-12">
+                <div className="space-y-8">
+                  <div className="space-y-2">
+                    <h2 className="text-[10px] uppercase tracking-[0.3em] font-bold text-text-muted">{portfolio.projectDetailsLabel}</h2>
+                    <div className="h-px w-8 bg-border" />
+                  </div>
+                  
                   <div className="space-y-6">
                     {project.client && (
                       <div className="flex flex-col gap-1">
@@ -132,27 +140,47 @@ export const ProjectDetail = ({ project, onClose }: ProjectDetailProps) => {
                     )}
                   </div>
                 </div>
- 
-                <div>
-                  <h2 className="text-[10px] uppercase tracking-[0.3em] font-bold text-text-muted mb-6">{portfolio.descriptionLabel}</h2>
-                  <p className="text-lg text-text-secondary leading-relaxed">
+
+                <div className="space-y-8">
+                  <div className="space-y-2">
+                    <h2 className="text-[10px] uppercase tracking-[0.3em] font-bold text-text-muted">{portfolio.descriptionLabel}</h2>
+                    <div className="h-px w-8 bg-border" />
+                  </div>
+                  <p className="text-xl text-text-secondary leading-relaxed font-medium">
                     {project.shortDescription}
                   </p>
                 </div>
+
+                {project.process && (
+                  <div className="space-y-8">
+                    <div className="space-y-2">
+                      <h2 className="text-[10px] uppercase tracking-[0.3em] font-bold text-text-muted">Process</h2>
+                      <div className="h-px w-8 bg-border" />
+                    </div>
+                    <p className="text-lg text-text-secondary leading-relaxed">
+                      {project.process}
+                    </p>
+                  </div>
+                )}
               </div>
  
               {/* Gallery Column */}
-              <div className="lg:col-span-2 space-y-12">
-                <h2 className="text-[10px] uppercase tracking-[0.3em] font-bold text-text-muted">{portfolio.galleryLabel}</h2>
-                <div className="grid grid-cols-1 gap-8">
+              <div className="lg:col-span-8 space-y-16 md:space-y-24">
+                <div className={cn(
+                  "grid gap-12 md:gap-20",
+                  isMotionOrAR ? "grid-cols-1" : "grid-cols-1 md:grid-cols-2"
+                )}>
                   {project.assets.map((asset, index) => (
                     <motion.div
                       key={index}
-                      initial={{ opacity: 0, y: 20 }}
+                      initial={{ opacity: 0, y: 30 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
-                      transition={{ delay: index * 0.1 }}
-                      className="relative rounded-2xl overflow-hidden bg-bg-secondary border border-border"
+                      transition={{ delay: index * 0.1, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                      className={cn(
+                        "relative overflow-hidden bg-bg-secondary border border-border",
+                        isMotionOrAR ? "rounded-xl" : "rounded-lg aspect-square md:aspect-auto"
+                      )}
                     >
                       {asset.type === 'video' ? (
                         <div className="relative group">
@@ -165,8 +193,8 @@ export const ProjectDetail = ({ project, onClose }: ProjectDetailProps) => {
                             playsInline
                             className="w-full h-auto"
                           />
-                          <div className="absolute top-4 right-4 p-2 rounded-full bg-white/80 backdrop-blur-md border border-border">
-                            <Play className="w-3 h-3 text-text-secondary" />
+                          <div className="absolute top-6 right-6 p-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white">
+                            <Play className="w-4 h-4 fill-current" />
                           </div>
                         </div>
                       ) : (
@@ -178,8 +206,8 @@ export const ProjectDetail = ({ project, onClose }: ProjectDetailProps) => {
                             alt={`${project.title} asset ${index + 1}`}
                             className="w-full h-auto"
                           />
-                          <div className="absolute top-4 right-4 p-2 rounded-full bg-white/80 backdrop-blur-md border border-border">
-                            <ImageIcon className="w-3 h-3 text-text-secondary" />
+                          <div className="absolute top-6 right-6 p-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white">
+                            <ImageIcon className="w-4 h-4" />
                           </div>
                         </div>
                       )}
@@ -191,14 +219,39 @@ export const ProjectDetail = ({ project, onClose }: ProjectDetailProps) => {
           </section>
  
           {/* Footer CTA */}
-          <footer className="max-w-7xl mx-auto px-6 py-24 border-t border-border text-center">
-            <button
-              onClick={onClose}
-              className="inline-flex items-center gap-4 px-8 py-4 rounded-full bg-accent text-white font-bold hover:scale-105 transition-transform shadow-lg shadow-accent/20"
-            >
-              <span>{portfolio.backToProjectsLabel}</span>
-              <ArrowLeft className="w-4 h-4 rotate-180" />
-            </button>
+          <footer className="bg-bg-secondary border-t border-border">
+            <div className="max-w-7xl mx-auto px-6 py-32 md:py-48 text-center">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="space-y-12"
+              >
+                <div className="space-y-4">
+                  <span className="text-[10px] uppercase tracking-[0.4em] font-bold text-text-muted">Next Step</span>
+                  <h2 className="text-4xl md:text-6xl font-bold text-text-primary tracking-tight">
+                    Interested in similar project?
+                  </h2>
+                </div>
+                
+                <a
+                  href={`mailto:${content.settings.email}?subject=Inquiry regarding ${project.title}`}
+                  className="inline-flex items-center gap-6 px-10 py-5 rounded-full bg-accent text-white font-bold text-lg hover:scale-105 transition-all shadow-2xl shadow-accent/20 group"
+                >
+                  <span>Start a Conversation</span>
+                  <ArrowLeft className="w-5 h-5 rotate-180 group-hover:translate-x-1 transition-transform" />
+                </a>
+
+                <div className="pt-12">
+                  <button
+                    onClick={onClose}
+                    className="text-[10px] uppercase tracking-[0.3em] font-bold text-text-muted hover:text-accent transition-colors"
+                  >
+                    {portfolio.backToProjectsLabel}
+                  </button>
+                </div>
+              </motion.div>
+            </div>
           </footer>
         </motion.div>
       )}

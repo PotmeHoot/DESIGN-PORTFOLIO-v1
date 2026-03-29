@@ -103,6 +103,7 @@ export interface Project {
   agency?: string;
   year?: string;
   shortDescription?: string;
+  process?: string;
   status?: ProjectStatus;
   featured?: boolean;
   order?: number;
